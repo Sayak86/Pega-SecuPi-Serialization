@@ -387,37 +387,90 @@ Add these lines to setenv.sh:
 # SecuPi Java Agent Integration
 export JAVA_OPTS="$JAVA_OPTS -javaagent:/opt/pega/lib/secupi.jar=secupi.agent.log.dest=stdout,secupi.agent.debug"
 
-# Java Module System Parameters (Java 9+)
+## Java Module System Parameters (Java 9+)
 
 
 export JAVA_OPTS="$JAVA_OPTS --add-modules=ALL-SYSTEM"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.base/java.io=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.base/java.lang=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.base/java.lang.reflect=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.base/java.net=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.base/java.nio=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.base/java.nio.charset=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.base/java.text=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.base/java.time=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.base/java.util=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.base/java.util.concurrent=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.base/jdk.internal.vm=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.base/jdk.internal.misc=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.base/sun.nio.ch=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.base/sun.nio.fs=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.base/sun.security.ssl=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.base/sun.security.action=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.base/sun.security.util=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.security.jgss/sun.security.jgss=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.desktop/java.awt=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.desktop/java.awt.peer=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.sql/java.sql=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.instrument/sun.instrument=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.management/sun.management=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-exports=java.instrument/sun.instrument=ALL-UNNAMED"
-===
+
+
 ## Step 3: Simplified Version (Recommended)
 Since that's a lot of parameters, here's a cleaner approach:
 
@@ -434,12 +487,24 @@ export JAVA_OPTS="$JAVA_OPTS -XX:+UseG1GC"
 # SecuPi Integration
 export JAVA_OPTS="$JAVA_OPTS -javaagent:/opt/pega/lib/secupi.jar=secupi.agent.log.dest=stdout,secupi.agent.debug"
 
-# Java Module Access (required for SecuPi with Java 11+)
+## Java Module Access (required for SecuPi with Java 11+)
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-modules=ALL-SYSTEM"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.base/java.lang=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.base/java.util=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.base/java.lang.reflect=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.instrument/sun.instrument=ALL-UNNAMED"
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-exports=java.instrument/sun.instrument=ALL-UNNAMED"
 
 # Pega Node Type
