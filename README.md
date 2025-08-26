@@ -388,6 +388,8 @@ Add these lines to setenv.sh:
 export JAVA_OPTS="$JAVA_OPTS -javaagent:/opt/pega/lib/secupi.jar=secupi.agent.log.dest=stdout,secupi.agent.debug"
 
 # Java Module System Parameters (Java 9+)
+
+
 export JAVA_OPTS="$JAVA_OPTS --add-modules=ALL-SYSTEM"
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.base/java.io=ALL-UNNAMED"
 export JAVA_OPTS="$JAVA_OPTS --add-opens=java.base/java.lang=ALL-UNNAMED"
